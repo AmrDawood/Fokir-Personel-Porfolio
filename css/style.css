@@ -339,6 +339,39 @@ SERVICES SECTION*/
     display: flex;
     flex-wrap: wrap;
 }
+#lightBoxContainer{
+    position: fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+#lightBoxItem{
+    width: 50%;
+    height: 400px;
+    background-image: url(../images/portfolio/2.jpg);
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#close{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#lightBoxItem i 
+{
+    font-size: 22px;
+    cursor: pointer;
+}
+
 .gallaryItem{
   /* background-color: crimson;*/
     width: 33.3%;
