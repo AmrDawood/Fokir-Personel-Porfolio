@@ -5,7 +5,7 @@
 }
 body{
     font-family: 'Alegreya Sans', sans-serif;
-    height: 100%;
+    /* height: 100%; */
 }
 .IfontAwsome{
 color: #ff305b;
@@ -25,10 +25,13 @@ font-size: 26px;
     border-left: 5px solid #ff305b;
     background-color: blue;
     height: 28px;
-    display: inline-block;
-    margin-right: 5px;
+    top: 5px;   
+    position: absolute;
 }
-
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
 /*START
 HEAD SECTION
 */
@@ -36,25 +39,28 @@ HEAD SECTION
     /*background-color:gray ;*/
     background-image: url(../images/slider/slider-01.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     background-attachment:fixed;
-    height: 100%;
+    height: 100vh;
     color: white;
 }
+
+
 .header{
     display: flex;
     justify-content: space-between;
-   /* height: 20%;*/
-   /*background-color: aqua;*/
-   padding:0px 50px  ;
+    padding:25px 0px ;
+    position: fixed;
+    left:7.5%;
+    right: 7.5%;
+    top: 0px;
 }
 .logo{
     /*background-color:yellow ;*/
 }
 .logo a{
    color: #ff305b; 
-   display:inline-block;
-   font-weight: 700;
+   font-weight: 900;
    font-size: 24px;
    padding: 18px 0;
    text-decoration: none;
@@ -70,14 +76,18 @@ HEAD SECTION
     display: none;
     color: #ffffff;
   }
+  .navigation ul{
+      display: flex;
+      list-style-type: none;
+  }
 .navigation ul li{
-   display: inline-block;
    padding: 18px 10px;
 }
 .navigation a{
     color: white;
     font-weight: 300;
     font-size: 16px;
+    text-decoration: none;
 }
 .navigation a:hover{
     color: #ff305b;
@@ -86,40 +96,39 @@ HEAD SECTION
     color: #ff305b;
 
 }
-.WelcomeContainer{
-    /*background-color: red;*/
+.layer{
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
-    height: 80%;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
 }
 .welcome{
    /* background-color: hotpink;*/
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:space-evenly ;
+    justify-content:space-evenly ; */
 }
-.welcome h3{
+.welcome span{
     font-size: 25px;
     font-weight: 600;
 
-  /*  padding: 20px 0;*/
 }
 .welcome h1{
     font-size: 70px;
-    /*padding: 20px 0;*/
+    padding: 10px 0;
     color: #ff305b; 
-    font-weight: bold;
+    font-weight: 900;
     text-transform: uppercase;
 }
 .welcome h4{
    font-size: 26px;
    font-weight: 300;
    text-transform: capitalize;
-   color: #333;
-  /* line-height: 50px;*/
-   /*margin-bottom: 20px;*/
+   color: white;
+
 }
 /*END
 HEAD SECTION
@@ -129,15 +138,18 @@ START
 ABOUT SECTION 
 */
 .about{
-    /*background-color: blue;*/
-    height: 100%;
+    /* background-color: blue; */
+    /* height: 100%; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0px auto;
+    padding: 35px 0px;
+
 }
 .aboutImg{
     width: 45%;
-    height: 100%;
    /* background-color: brown;*/
     display: flex;
     justify-content:center;
@@ -162,7 +174,6 @@ ABOUT SECTION
 }
 .aboutInfo{
     width: 50%;
-    height: 100%;
    /* background-color: rebeccapurple;*/
     color: #686868;
     font-weight: 400;
@@ -176,14 +187,16 @@ ABOUT SECTION
    /* background-color: #ff305b;*/
    border-bottom: 1px dashed #999999;
    margin-bottom: 10px;
+   position: relative;
 }
 .aboutInfo h2{
     font-weight: 600;
     font-size: 35px;
+    padding-left: 10px;
     margin-bottom: 20px;
     color: black;
     text-transform: uppercase;
-    display: inline-block;
+    /* display: inline-block; */
 
 }
 .aboutInfo p{
@@ -226,7 +239,7 @@ ABOUT SECTION
     padding: 10px 24px;
     border-radius: 4px;
     color: white;
-    margin: 20px 5px;
+    margin: 20px 5px 20px 0;
     font-weight: 700;
     background-color: #ff305b ;
     text-decoration: none;
@@ -245,41 +258,47 @@ ABOUT SECTION
 START
 SERVICES SECTION*/
 .ourServices{
-    height: 80%;
     text-align: center;
     background-color: #f1f1f1;
+    padding: 35px 0px;
 }
 .ourServices h2{
     font-weight: 900;
     font-size: 35px;
-    padding-top: 40px;
+    padding-top: 15px;
     margin-bottom: 10px;
     color: black;
     text-transform: capitalize;
 }
-.container{
-    width: 90%;
-    margin:0px auto;
-    height: 60%;
+.our-services-container{
+    width: 85%;
+    margin:45px auto;
+    padding-bottom:25px ;
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: center;
 }
 .serviceType{
-    width: 25% ;
-    padding: 20px 2px;
-    align-self: flex-end;
+    width: 20% ;
+    padding: 20px 10px;
+
+    /* align-self: flex-end; */
   /* background-color: brown;*/
-     transition: transform 2s;
+     transition: background-color .5s ease-in-out;
 }
 .serviceType:hover{
     background-color: #ffffff;
-   transform:scale(1.1,1.1);
+    border-radius: 5px;
+   /* transform:scale(1.1,1.1); */
 }
 
 .serviceType i{
     font-size: 36px;
     color: #ff305b;
+    transition: transform .5s .5s ease-in-out;
+}
+.serviceType:hover.serviceType i{
+    transform:scale(1.1,1.1);
 }
 .serviceType:first-of-type{
     padding-right: 20px;
@@ -306,6 +325,9 @@ SERVICES SECTION*/
     flex-wrap: wrap;
     justify-content: center;*/
     text-align: center;
+    width: 85%;
+    margin: 0px auto;
+    padding: 35px 0;
 }
 .ourPorfolio h2{
     font-weight: 900;
@@ -335,9 +357,10 @@ SERVICES SECTION*/
 }
 .portfolioGallary{
   /* background-color: blue;*/
-    height: 80%;
+    /* height: 80%; */
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 #lightBoxContainer{
     position: fixed;
@@ -352,8 +375,8 @@ SERVICES SECTION*/
     z-index: 5;
 }
 #lightBoxItem{
-    width: 50%;
-    height: 400px;
+    width: 35%;
+    height: 50%;
     background-image: url(../images/portfolio/2.jpg);
     background-size: 100% 100%;
     position: relative;
@@ -374,10 +397,10 @@ SERVICES SECTION*/
 
 .gallaryItem{
   /* background-color: crimson;*/
-    width: 33.3%;
-    height: 50%;
+    width: 25%;
+    /* height: 50%; */
    /* border:1px solid black ;*/
-    padding: 5px;
+    padding: 15px;
     position: relative;
 }
 
@@ -394,8 +417,8 @@ SERVICES SECTION*/
 }
 
 .gallaryItem img{
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 }
 .gallaryItem img:hover{
     opacity: .9;
@@ -406,25 +429,32 @@ SERVICES SECTION*/
 
 /*Start statistics section*/
 .statistics{
-    height: 30%;
     background: #f1f1f1;
+   
+    text-align: center;
+    
+    padding: 35px 0;
+    
+}
+.statistics-container{
+    width: 85%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
-    align-items: center;
 }
 .statisticsCol{
     width: 25%;
-    height: 50%;
    /* background-color: chartreuse;*/
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding: 15px 0;
 }
 .statisticsCol span{
     font-size: 26px;
     font-weight: 600;
     color: #333;
+    padding: 15px 0;
 }
 .statisticsCol h5{
     font-size: 16px;
@@ -436,12 +466,14 @@ SERVICES SECTION*/
 .testimonial{
     text-align: center;
   /*  background-color: grey;*/
-    height: 70%;
+    /* height: 70%; */
+    width: 85%;
+    margin: 0 auto;
 }
 .testimonial h2{
     font-weight: 900;
     font-size: 35px;
-    padding-top: 40px;
+    padding-top: 15px;
     margin-bottom: 10px;
     color: black;
     text-transform: capitalize;
@@ -450,11 +482,12 @@ SERVICES SECTION*/
     background-color: #f1f1f1;
     margin: 20px auto;
     border-radius: 5px;
-    width: 90%;
-    height: 60%;
+    width: 50%;
+    /* height: 60%; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
     position: relative;
 }
 .triangle{
@@ -467,16 +500,17 @@ SERVICES SECTION*/
         left: 0;  
         z-index: 1;
 }
+
 .testimonialBodyImg{
-    width: 20%;
+    width: 15%;
     /*background-color: indigo;*/
     position: relative; 
     z-index: 2;
 }
 .testimonialBodyImg img{
-    width: 110px;
-    height: 110px;
-    border-radius: 50px;
+    width: 100%;
+    /* height: 110px; */
+    border-radius: 50%;
 }
 .testimonialBodyImg img:hover{
     transform: rotate(45deg);
@@ -484,6 +518,7 @@ SERVICES SECTION*/
 .testimonialBodyData{
     width: 70%;
     text-align: left;
+    padding: 15px 0px;
    /* background-color: gray;*/
 }
 .testimonialBodyData h3{
@@ -497,44 +532,49 @@ SERVICES SECTION*/
     font-style: italic;
     color: #555555;
     line-height: 30px;
+    padding-bottom: 15px;
 }
 .testimonialBodyData a , .testimonialBodyData i{
     text-decoration: none;
     font-size: 14px;
     color: #777777;
+    padding-bottom: 15px;
+
 }
 .testimonialRating i{
     padding-top:5px;
-    color: yellow;
+    color: #f1c30d;
 }
 .testimonialLinks{
     /*background-color: gold;*/
+    padding-bottom: 15px;
 }
 .testimonialLinks a{
-    display: inline-block;
-    width: 35px;
-    height: 12px;
-    background-color:#ff305b ;
-    border-radius: 10px;
-}
-.testimonialLinks a:hover{
-    border:1px solid #ff305b;
     display: inline-block;
     width: 15px;
     height: 15px;
     background-color:white ;
     border-radius: 7px;
+    border:1px solid #ff305b;
+
+}
+.testimonialLinks a:active{
+    border-radius: 10px;
+    width: 35px;
+    height: 15px;
+    background-color:#ff305b ;
 }
 /*end testimonial section*/
 /*START BLOG*/
 .blog{
     background-color: #f1f1f1;
     text-align: center;
-    height: 100%;
-    display: flex;
+    /* height: 100%; */
+    /* display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; */
+    padding: 35px 0 ;
 }
 .blog h2{
     font-weight: 900;
@@ -542,51 +582,59 @@ SERVICES SECTION*/
     color: black;
     text-transform: capitalize;
 }
+.blogHeader{
+    padding: 15px 0;
+}
 .blogContainer{
-    width: 90%;
-    height: 60%;
+    width: 85%;
+    /* height: 60%; */
    /* background-color: gray;*/
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .blogColumn{
-    width: 28%;
-   background-color: white;
-    display: flex;
+    width: 30%;
+    background-color: white;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; */
     text-align: left;
     padding-bottom: 20px;
 }
 .blogColumn img{
     width: 100%;
 }
-.blogColumn span{
+.blogColumn-data{
+    padding: 15px;
+}
+.blogColumn-data span{
     color: #555555;
     font-size: 16px;
-    padding-left: 5px;
+    padding: 15px 0;
 }
-.blogColumn a{
+.blogColumn-data a{
     text-decoration: none;
     color: black;
     font-weight: bold;
-    padding-left: 5px;
+
 }
 
-.blogColumn a:hover{
+.blogColumn-data a:hover{
     color: #ff305b;  
 }
-.blogColumn p{
+.blogColumn-data p{
     color: #555555;
     line-height: 25px;
-    padding-left: 5px;
-
+    padding: 15px 0;
 }
-.blogColumn a:last-of-type{
+.blogColumn-data a:last-of-type{
     color: #333333;
     text-transform: capitalize;
     font-weight: 400;
+    padding-bottom: 15px;
+
 }
 /*END BLOG*/
 /*Start contact*/
@@ -595,7 +643,8 @@ SERVICES SECTION*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 75%;
+    padding: 35px 0;
+    /* height: 75%; */
 }
 .contactHeader h2{
     font-weight: 900;
@@ -608,13 +657,13 @@ SERVICES SECTION*/
 .contactFormContainer{
    /* background-color: chocolate;*/
     display: flex;
-    width: 90%;
+    width: 85%;
     justify-content: center;
-    height: 80%;
+    /* height: 80%; */
 }
 .contactFormContainer form{
     padding-top: 20px;
-    width: 90%;
+    width: 50%;
    /*background-color: darkorchid;*/
    /* height: 100%;*/
    display: flex;
@@ -622,7 +671,7 @@ SERVICES SECTION*/
 }
 .contactFormRow{
     width: 100%; 
-    height: 20%;
+    /* height: 20%; */
 }
  .firstRow{
     display: flex;
@@ -631,40 +680,46 @@ SERVICES SECTION*/
 }
 .firstRow input{
     width: 48%;
-    height: 50%;
+    /* height: 50%; */
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 6px 12px;
+    padding: 10px 12px;
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
+    margin: 15px 0;
 }
 .subject input{
     width: 100%;
-    height: 50%;
+    /* height: 50%; */
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 6px 12px;
+    padding: 10px 12px;
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
+    margin: 15px 0;
+
 }
 .contactFormRow textarea{
     width: 100%;
-    height: 85%;
+    /* height: 85%; */
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 6px 12px;
+    padding: 10px 12px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #555;  
+    color: #555; 
+    margin: 15px 0;
+    resize: vertical;
+ 
 }
 input:focus , textarea:focus{
     border: 3px solid #ff305b;
 }
 .submitBtn{
     width: 20%;
-    height: 50%;
+    /* height: 50%; */
     font-size: 11px;
     font-weight: bold;
     background-color: #ff305b;
@@ -672,8 +727,10 @@ input:focus , textarea:focus{
     border-radius: 5px;
     color: #ffffff;
     margin-top: 20px;
-    padding: 0 20px;
+    padding: 15px 20px;
     text-transform: uppercase;
+    margin: 15px 0;
+
 }
 .submitBtn:hover{
     cursor: not-allowed;
@@ -683,17 +740,15 @@ input:focus , textarea:focus{
 /*Start Footer*/
 .footer{
     background-color: rgb(53, 52, 52);
-    height:25%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    padding: 35px 0;
 }
 .socialFooter{
     /*background-color: aqua;*/
     padding-bottom: 10px;
-
 }
 .socialFooter a{
     /*background-color: aqua;*/
@@ -738,32 +793,34 @@ input:focus , textarea:focus{
     .welcome h4{
         font-size: 18px;
     }
+
     .menu-btn{
         display: block;
+        padding-top: 0px;
       }
       .navigation ul{
           display: none;
       }
       .header{
-          justify-content: space-around;
+          justify-content: space-between;
       }
     /*HEADER SECTION*/
     /*-----------------------*/
     /*about Section*/
     .about{
-        height: 150%;
+        /* height: 150%; */
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
     }
     .aboutImg{
         width: 90%;
-        height: 50%;
+        /* height: 50%; */
         padding-top: 25px;
     }
     .aboutImgContainer{
         width: 100%;
-        height: 100%;
+        /* height: 100%; */
         border: none;
         border-radius: 5px;
 
@@ -776,7 +833,8 @@ input:focus , textarea:focus{
     }
     .aboutInfo{
         width: 90%;
-        height: 50%;
+        /* height: 50%; */
+        padding: 25px 0;
     }
     .aboutInfoContainer{
        /* background-color: #ff305b;*/
@@ -785,38 +843,40 @@ input:focus , textarea:focus{
     }
     .aboutInfo h2{
         font-size: 28px;
-        margin-bottom: 10px;
+        padding-bottom: 15px;
     }
     .aboutInfo p{
         font-size: 15px;
         line-height: 23px;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
     }
     .aboutInfoList ul{
-        font-size: 13px;    
+        font-size: 13px; 
+        padding-bottom: 15px;
+    }
+    .aboutInfoList li{
+        width: 100%;
+        padding-bottom: 15px;
     }
     .aboutInfoLinks{
         /* background-color: blue;*/
      }
      .aboutInfoLinks a{
-         font-size: 10px;
-         width: 30%;
+         font-size: 15px;
+         width: 35%;
          padding: 10px 24px;
          border-radius: 4px;
-         margin: 20px 5px;
-         display: inline-block;
+         text-align: center;
+
      }
     /*about Section*/
 /*-----------------------------------------*/
 /*-----------------------------------------*/
     /*Services Section*/
-    .ourServices{
-        height: 170%;
-    }
-    .container{
+
+    /* .our-services-container{
         width: 90%;
-        height: 80%;
-    }
+    } */
     .serviceType{
         width: 100% ;
         line-height: 18px;
@@ -828,44 +888,31 @@ input:focus , textarea:focus{
 /*----------------------------------------*/
 /*portfolio section*/
 .portfolioNavigation{
-    width: 60%;
-    margin: 0 auto;
-}
-.ourPorfolio{
-    height: 300%;
+    padding: 15px 0;
 }
 .portfolioGallary{
-    height: 50%;
     justify-content: center;
     padding-bottom: 20px;
 }
 .gallaryItem{
-    /*  background-color: crimson;*/
-    width: 60%;
-    height:30%;
-    /* border:1px solid black ;*/
-    padding: 5px; 
+    width: 90%;
+    padding: 15px 0; 
 }
 /*portfolio section*/
 /*----------------------------------------*/
 /*-----------------------------------------*/
    /*-----statistics Section-------*/
-  .statistics{
-      height: 100%;
-  }
+
   .statisticsCol{
       width: 100%;
-      height:25%;
   }
     /*-----statistics Section-------*/
 /*---------------------------------------------------*/
 /*---------------------------------------------------*/
     /*-----testimonial Section-------*/
-    .testimonial{
-        height: 100%;
-    }
+
     .testimonialBody{
-        width: 80%;
+        width: 100%;
         flex-direction: column;
         justify-content: space-evenly;
     }
@@ -874,15 +921,14 @@ input:focus , textarea:focus{
         border-right: 150px solid transparent;
     }
     .testimonialBodyImg{
-        width: 30%;
+        width: 25%;
     }
     .testimonialBodyImg img{
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
+  
+        padding-top: 15px;
     }
     .testimonialBodyData{
-        width: 70%;
+         width: 90%;
     }
     .testimonialBodyData h3{
         font-size: 18px;
@@ -891,31 +937,17 @@ input:focus , textarea:focus{
         color: #333;
     }
     .testimonialBodyData p{
-        font-size: 12px;
+        font-size: 15px;
         line-height: 25px;
-        padding-right: 5px;
         font-weight: 600;
     }
     /*-----testimonial Section-------*/
     /*---------------------------------------------------*/
     /*---------------------------------------------------*/
     /*-----blog Section-------*/
-    .blog{  
-        height: auto;
-    }
 
-    .blogContainer{
-        width: 90%;
-        height: 90%;
-       /* background-color: gray;*/
-        flex-direction: column;
-        align-content: center;
-        margin: 20px 0;
-       /* justify-content: space-between;*/
-    }
     .blogColumn{
         width: 100%;
-        padding-bottom: 20px;
         margin-bottom: 20px;
         line-height: 45px;
     }
@@ -924,24 +956,21 @@ input:focus , textarea:focus{
     /*---------------------------------------------------*/
     /*---------------------------------------------------*/
    /*-----contact Section-------*/
-   .contact{
-        height: 100%;
+  
+    .contactFormContainer form{
+        width: 100%;
     }
-
     .firstRow{
         flex-direction: column;
-        height: 40%;
         justify-content: space-evenly;
     }
     .firstRow input{
         width: 100%;
-        height: 25%;  
     }
     .submitBtn{
         width: 40%;
-        height: 50%;
-        font-size: 13px;
-        padding:  0px; 
+        font-size: 15px;
+        padding:  10px 24px; 
     }
    /*-----contact Section-------*/
 /*---------------------------------------------------*/
@@ -953,6 +982,8 @@ input:focus , textarea:focus{
     /*HEADER SECTION*/
      .menu-btn{
         display: block;
+        padding-top: 0px;
+
       }
       .navigation ul{
           display: none;
@@ -964,32 +995,27 @@ input:focus , textarea:focus{
     /*-----------------------*/
     /*about Section*/
        .about{
-        height: 150%;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
     }
     .aboutImg{
-        width: 60%;
-        height: 50%;
+        width: 85%;
         padding-top: 25px;
     }
     .aboutImgContainer{
         width: 100%;
-        height: 100%;
         border: none;
         border-radius: 5px;
-
     }
     .aboutImgContainer img{
         width: 100%;
-        height: 100%;
         border-radius: 5px;
         position: static;
     }
     .aboutInfo{
-        width: 60%;
-        height: 50%;
+        width: 85%;
+        padding: 25px 0 ;
     }
     .aboutInfoContainer{
        /* background-color: #ff305b;*/
@@ -998,118 +1024,88 @@ input:focus , textarea:focus{
     }
     .aboutInfo h2{
         font-size: 28px;
-        margin-bottom: 10px;
+        padding-bottom: 15px;
     }
     .aboutInfo p{
         font-size: 15px;
         line-height: 23px;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
     }
     .aboutInfoList ul{
-        font-size: 13px;   
+        font-size: 15px;   
+    }
+    .aboutInfoList li{
+        width: 100%;
+        padding-bottom: 15px;
     }
 
     /*about Section*/
     /*-----------------------------------------*/
    /*-----------------------------------------*/
     /*Services Section*/
-    .ourServices{
-        height: 150%;
-    }
-    .ourServices h2{
-
-    }
-    .container{
-        width: 90%;
-        height: 80%;
-    }
     .serviceType{
         width: 100% ;
-   
+        line-height: 18px;
     }
+
     /*Services Section*/
     /*-----------------------------------------*/
      /*porfolio section*/
-    .ourPorfolio{
-        height: 300%;
+     .portfolioNavigation{
+        padding: 15px 0;
     }
     .portfolioGallary{
-        height: 50%;
         justify-content: center;
         padding-bottom: 20px;
     }
     .gallaryItem{
-        /*  background-color: crimson;*/
-        width: 60%;
-        height:30%;
-        /* border:1px solid black ;*/
-        padding: 5px; 
+        width: 90%;
+        padding: 15px 0; 
     }
     /*porfolio section*/
     /*------------------------*/
    /*-----statistics Section-------*/
-   .statistics{
-    height: 100%;
-    }
     .statisticsCol{
     width: 100%;
-    height:25%;
     }
     /*-----statistics Section-------*/
     /*-----testimonial Section-------*/
-    .testimonial{
-        height: 100%;
-    }
     .testimonialBody{
-        width: 80%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
     .triangle{
         border-top: 150px solid #ff305b;
         border-right: 150px solid transparent;
     }
     .testimonialBodyImg{
-        width: 30%;
+        width: 25%;
     }
     .testimonialBodyImg img{
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
+  
+        padding-top: 15px;
     }
     .testimonialBodyData{
-        width: 70%;
+         width: 90%;
     }
     .testimonialBodyData h3{
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 600;
         margin-bottom: 10px;
         color: #333;
     }
     .testimonialBodyData p{
-        font-size: 13px;
+        font-size: 15px;
         line-height: 25px;
-        padding-right: 5px;
+        font-weight: 600;
     }
-
     /*-----testimonial Section-------*/
     /*---------------------------------------------------*/
     /*---------------------------------------------------*/
     /*-----blog Section-------*/
-    .blog{  
-        height: auto;
-    }
-
-    .blogContainer{
-        width: 90%;
-        height: 90%;
-       /* background-color: gray;*/
-        flex-direction: column;
-        align-content: center;
-        margin: 20px 0;
-       /* justify-content: space-between;*/
-    }
     .blogColumn{
-        width: 70%;
-        padding-bottom: 20px;
+        width: 100%;
         margin-bottom: 20px;
         line-height: 45px;
     }
@@ -1118,23 +1114,25 @@ input:focus , textarea:focus{
 /*---------------------------------------------------*/
 /*---------------------------------------------------*/
    /*-----contact Section-------*/
-   .contact{
-    height: 100%;
-    }
-
-    .firstRow{
-    flex-direction: column;
-    height: 40%;
-    justify-content: space-evenly;
-    }
-    .firstRow input{
+   .contactFormContainer form{
     width: 100%;
-    height: 25%;  
-    }
+}
+.firstRow{
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.firstRow input{
+    width: 100%;
+}
+.submitBtn{
+    width: 40%;
+    font-size: 15px;
+    padding:  10px 24px; 
+}
+/*----
    /*-----contact Section-------*/
 /*---------------------------------------------------*/
 /*---------------------------------------------------*/
-
 
 }
 @media all and (min-width:769px) and (max-width:992px){
@@ -1166,47 +1164,24 @@ input:focus , textarea:focus{
 /*-----------------------------------------*/
 /*-----------------------------------------*/
     /*Services Section*/
-    .ourServices{
-        height: 100%;
-    }
-    .ourServices h2{
-
-    }
-    .container{
-        width: 90%;
-
-        height: 80%;
-    }
     .serviceType{
-        width: 50% ;
-   
+        width: 50% ; 
     }
     /*Services Section*/
     /*----------------------------------------*/
 /*portfolio section*/
-    .ourPorfolio{
-        height: 150%;
-    }
-    .portfolioGallary{
-        height: 70%;
-    }
     .gallaryItem{
-        /*  background-color: crimson;*/
         width: 50%;
-        height:35%;
-        /* border:1px solid black ;*/
-        padding: 5px; 
+        padding: 15px; 
     }
     
 /*portfolio section*/
 /*----------------------------------------*/
     /*-----------------------------------------*/
     /*-----testimonial Section-------*/
-    .testimonial{
-      height: 100%;
-    }
+ 
     .testimonialBody{
-       width: 80%;
+       width: 100%;
     }
     .triangle{
         border-top: 150px solid #ff305b;
@@ -1216,30 +1191,29 @@ input:focus , textarea:focus{
 /*---------------------------------------------------*/
 /*---------------------------------------------------*/
     /*-----blog Section-------*/
-    
-    .blog{  
-        height: auto;
-    }
 
-    .blogContainer{
-        width: 90%;
-        height: 90%;
-       /* background-color: gray;*/
-        margin: 20px 0;
-       /* justify-content: space-between;*/
-    }
     .blogColumn{
-        width: 30%;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
+        width: 32%;
         line-height: 45px;
+        padding-bottom: 15px;
+
     }
     /*-----blog Section-------*/
+    /* contact section */
+    .contactFormContainer form{
+        width: 100%;
+    }
+    .firstRow input{
+        width: 47.5%;
+    }
+    .submitBtn{
+        width: 40%;
+        font-size: 15px;
+        padding:  10px 24px; 
+    }
 /*---------------------------------------------------*/
 }
 @media all and (min-width:992px){
-
-
 }
 /*Media query*/
 

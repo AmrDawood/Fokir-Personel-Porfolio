@@ -8,29 +8,32 @@
     </head>
     <body>
     <!--home -->    
-        <div id="home" class="home">
-            <div class="header">
-                <div class="logo">
-                <a href="index.html">Fokir</a>
+        <div id="home" class="home">  
+            <!-- <div class="container"> -->
+                <div class="header">
+                    <div class="logo">
+                    <a href="index.html">Fokir</a>
+                    </div>
+                    <div class="navigation">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#ourServices">Services</a></li>
+                                <li><a href="#ourPorfolio">Portfolio</a></li>
+                                <li><a href="#testimonial">Testimonial</a></li>
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>                
+                    </div>
+                    <div class="menu-btn">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </div>
                 </div>
-                <div class="navigation">
-                        <ul>
-                            <a href=""> <li>Home</li></a>
-                            <a href="#about"> <li>About</li></a>
-                            <a href="#ourServices"> <li>Services</li></a>
-                            <a href="#ourPorfolio"> <li>Portfolio</li></a>
-                            <a href="#testimonial"> <li>Testimonial</li></a>
-                            <a href="#blog"> <li>Blog</li></a>
-                            <a href="#contact"> <li>Contact</li></a>
-                        </ul>                
-                </div>
-                <div class="menu-btn">
-                    <i class="fas fa-bars fa-2x"></i>
-                </div>
-            </div>
-            <div class="WelcomeContainer">
+            <!-- </div>               -->
+                
+            <div class="layer">
                 <div class="welcome">
-                    <h3>Hello i'm</h3>
+                    <span>Hello i'm</span>
                     <h1>ALEX SMITH</h1>
                     <h4>Professional Web Developer</h4>
                 </div>
@@ -39,6 +42,7 @@
     <!--home -->
     <!--about -->   
         <div class="about" id="about">
+
             <div class="aboutImg">
                 <div class="aboutImgContainer">
                     <img src="images/about/profile.jpg" alt="">
@@ -90,9 +94,8 @@
             <hr class="hrLine">
             <hr class="middleHrLine">
             <hr class="hrLine">
-            <div class="container">
-                
-                
+            <div class="our-services-container">
+                                
                 <div class="serviceType">
                     <i class="fas fa-pencil-ruler "></i>	
                     <h3>UI/UX DESIGN</h3>
@@ -201,26 +204,28 @@
     <!--ourPorfolio -->
     <!--statistics -->
     <div id="statistics" class="statistics" >
-        <div class="statisticsCol">
-            <i class="fas fa-users IfontAwsome"></i> 
-            <span data-target="6">0</span>
-            <h5>Team members</h5>
-        </div>
-        <div class="statisticsCol">
-            <i class="fas fa-copy IfontAwsome"></i> 
-            <span data-target="82">0</span>
-            <h5>Complete Projects</h5>
-        </div>
-        <div class="statisticsCol">
-            <i class="fas fa-download IfontAwsome"></i> 
-            <span data-target="432">0</span>
-            <h5>Files Downloaded</h5>
-        </div>
-        <div class="statisticsCol">
-            <i class="fas fa-coffee IfontAwsome"></i> 
-            <span data-target="288">0</span>
-            <h5>Lines Of Code</h5>
-        </div>
+        <div class="statistics-container">
+            <div class="statisticsCol">
+                <i class="fas fa-users IfontAwsome"></i> 
+                <span data-target="6">0</span>
+                <h5>Team members</h5>
+            </div>
+            <div class="statisticsCol">
+                <i class="fas fa-copy IfontAwsome"></i> 
+                <span data-target="82">0</span>
+                <h5>Complete Projects</h5>
+            </div>
+            <div class="statisticsCol">
+                <i class="fas fa-download IfontAwsome"></i> 
+                <span data-target="432">0</span>
+                <h5>Files Downloaded</h5>
+            </div>
+            <div class="statisticsCol">
+                <i class="fas fa-coffee IfontAwsome"></i> 
+                <span data-target="288">0</span>
+                <h5>Lines Of Code</h5>
+            </div>
+        </div>    
     </div>
     <!--statistics -->
     <!--testimonial -->
@@ -231,7 +236,7 @@
             <hr class="middleHrLine">
             <hr class="hrLine">
         </div>
-        <div class="testimonialBody">
+        <div id="first-testimonial" class="testimonialBody">
             <div class="triangle"></div>
             <div class="testimonialBodyImg">
                 <img src="images/testimonial/2.jpg" alt="">
@@ -255,7 +260,7 @@
             </div>
         </div>
         <div class="testimonialLinks">
-            <a href=""></a>
+            <a href="#first-testimonial"></a>
             <a href=""></a>
         </div>
     </div>
@@ -268,39 +273,48 @@
                 <hr class="middleHrLine">
                 <hr class="hrLine">
             </div>
-            <div class="blogContainer">
+            <div class="blogContainer">              
                 <div class="blogColumn">
                         <img src="images/blog/1.jpg" alt="">
+                        <div class="blogColumn-data">
                         <span>20 April, 2018</span>
-                        <a href=""><h3>Web Design Blog Post</h3></a>
+                        <h3><a href="">Web Design Blog Post</a></h3>
                         <p>
                             Lorem ipsum dolor sit amet, 
                             consectetur adipisicing elit. Consequuntur ea,
                             quis magnam deserunt eius incidunt repellat molestiae.
                         </p>
                         <a href="">READ MORE<i class="fas fa-arrow-right"></i> </a>
-                </div>
+                    </div>
+            </div>
+
                 <div class="blogColumn">
                         <img src="images/blog/1.jpg" alt="">
+                        <div class="blogColumn-data">
+
                         <span>23 November, 2015</span>
-                        <a href=""><h3>Development Blog Post</h3></a>
+                        <h3><a href="">Development Blog Post</a></h3>
                         <p>
                             Lorem ipsum dolor sit amet, 
                             consectetur adipisicing elit. Consequuntur ea,
                             quis magnam deserunt eius incidunt repellat molestiae.
                         </p>
                         <a href="">READ MORE<i class="fas fa-arrow-right"></i> </a>
-                </div>
+                    </div>
+            </div>
                 <div class="blogColumn">
                         <img src="images/blog/3.jpg" alt="">
-                        <span>17 May, 2017</span>
-                        <a href=""><h3>Full Width Blog Post</h3></a>
-                        <p>
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipisicing elit. Consequuntur ea,
-                            quis magnam deserunt eius incidunt repellat molestiae.
-                        </p>
-                        <a href="">READ MORE <i class="fas fa-arrow-right"></i></a>
+
+                        <div class="blogColumn-data">
+                            <span>17 May, 2017</span>
+                            <h3><a href="">Full Width Blog Post</a></h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. Consequuntur ea,
+                                quis magnam deserunt eius incidunt repellat molestiae.
+                            </p>
+                            <a href="">READ MORE <i class="fas fa-arrow-right"></i></a>
+                        </div>
                 </div>
             </div>
         </div>
