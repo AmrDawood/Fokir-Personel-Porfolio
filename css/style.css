@@ -21,13 +21,13 @@ font-size: 26px;
     margin: 2px auto;
     border: .5px solid #ff305b;
 }
-.verticalLine{
+/* .verticalLine{
     border-left: 5px solid #ff305b;
     background-color: blue;
     height: 28px;
     top: 5px;   
     position: absolute;
-}
+} */
 .container{
     width: 85%;
     margin: 0 auto;
@@ -154,6 +154,8 @@ ABOUT SECTION
     display: flex;
     justify-content:center;
     align-items: center; 
+    padding: 15px 0px;
+
 }
 .aboutImgContainer{
     width: 360px;
@@ -182,12 +184,13 @@ ABOUT SECTION
     justify-content: center;
     align-content: center;
     flex-wrap: wrap ;
+    padding: 15px 0px;
+
 }
 .aboutInfoContainer{
    /* background-color: #ff305b;*/
    border-bottom: 1px dashed #999999;
    margin-bottom: 10px;
-   position: relative;
 }
 .aboutInfo h2{
     font-weight: 600;
@@ -196,8 +199,15 @@ ABOUT SECTION
     margin-bottom: 20px;
     color: black;
     text-transform: uppercase;
-    /* display: inline-block; */
-
+    position: relative;
+}
+.aboutInfo h2::before{
+    content: "";
+    height: 100%;
+    width: 5px;
+    background-color: #ff305b;
+    position: absolute;
+    left: 0;
 }
 .aboutInfo p{
     color: #555555;
@@ -273,7 +283,7 @@ SERVICES SECTION*/
 .our-services-container{
     width: 85%;
     margin:45px auto;
-    padding-bottom:25px ;
+    padding-bottom:15px ;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -843,7 +853,6 @@ input:focus , textarea:focus{
     }
     .aboutInfo h2{
         font-size: 28px;
-        padding-bottom: 15px;
     }
     .aboutInfo p{
         font-size: 15px;
@@ -1024,7 +1033,6 @@ input:focus , textarea:focus{
     }
     .aboutInfo h2{
         font-size: 28px;
-        padding-bottom: 15px;
     }
     .aboutInfo p{
         font-size: 15px;
